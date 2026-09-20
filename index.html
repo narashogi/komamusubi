@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3edff">
+  <meta name="description" content="ころんと落として、ぴたっと合体。持ち駒と配置でハイスコアに挑む、将棋マージパズル。">
+  <title>こまむすび — 配置を読んで、ハイスコア！</title>
+  <script>
+    document.documentElement.classList.add("app-loading");
+    window.failAppStartup = () => {
+      if (!document.documentElement.classList.contains("app-loading")) return;
+      document.documentElement.classList.replace("app-loading", "app-failed");
+    };
+    window.addEventListener("error", event => {
+      if (event instanceof ErrorEvent || event.target?.tagName === "SCRIPT") window.failAppStartup();
+    }, true);
+  </script>
+  <style>
+    html.app-loading #phone-preview{visibility:hidden}
+    #startup-error{display:none}
+    html.app-failed #phone-preview{display:none}
+    html.app-failed #startup-error{display:block;padding:24px;text-align:center}
+  </style>
+  <link href="./vendor/fonts/mochiy-pop-one.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+  <link href="./world.css" rel="stylesheet">
+</head>
+<body>
+  <p id="startup-error" role="alert">読み込みに失敗しました。画面を再読み込みしてください。</p>
+  <div id="phone-preview"><div id="phone-screen">
+  <div class="app">
+    <header class="masthead">
+      <a class="brand" href="./index.html" aria-label="こまむすび トップメニューへ"><img class="brand-logo" src="./assets/komamusubi-logo-puffy.png" alt="" aria-hidden="true">
+
+
+</a>
+      <div class="utility"><button id="sound" class="icon-button" type="button" aria-label="音を切り替え" aria-pressed="true">♪</button><button id="audio-open" class="icon-button" type="button" aria-label="音量設定">⚙</button><button id="help" class="icon-button" type="button" aria-label="遊び方">？</button></div>
+    </header>
+    <section id="top-menu" hidden aria-label="トップメニュー">
+      <div class="menu-heading"><h1 aria-label="&#12371;&#12414;&#12416;&#12377;&#12403;"><img class="home-logo" src="./assets/komamusubi-logo-puffy.png" alt="" aria-hidden="true">
+
+</h1></div>
+      <div class="menu-scene">
+        <span class="menu-spark spark-one" aria-hidden="true">✦</span><span class="menu-spark spark-two" aria-hidden="true">✧</span>
+        <button id="menu-friends" type="button" aria-label="こまたちにごあいさつ">
+          <svg viewBox="0 35 360 230" aria-hidden="true" class="menu-characters">
+            <ellipse cx="181" cy="235" rx="155" ry="26" fill="#ddc8f0" opacity=".5"/>
+            <ellipse cx="181" cy="227" rx="148" ry="25" fill="#fff9ff" stroke="#e9d7f5" stroke-width="2"/>
+            <g class="friend friend-left" transform="rotate(-17 90 173)"></g>
+            <g class="friend friend-right" transform="rotate(15 275 162)"></g>
+            <g class="friend friend-center"></g>
+          </svg>
+        </button>
+      </div>
+      <div class="menu-modes">
+        <button id="normal-mode" class="jelly-menu-button" type="button"><span>ひとりでこつこつ</span></button>
+        <button id="puzzles-open" class="jelly-menu-button" type="button"><span>詰めこま</span></button>
+        <button id="battle-mode" class="jelly-menu-button" type="button" disabled title="対戦モードは準備中です"><span>対戦モード</span></button>
+      </div>
+    </section>
+    <main class="game-layout">
+      <section class="play-column" aria-label="こまむすびゲーム">
+        <div id="puzzle-info" hidden>
+          <div class="puzzle-heading"><strong id="puzzle-title"></strong><span id="puzzle-record"></span></div>
+          <div class="puzzle-task"><span id="puzzle-remaining" role="status"></span></div>
+          <div class="puzzle-tools"><button id="puzzle-hint" type="button" aria-expanded="false" aria-controls="puzzle-hint-text">ヒントを見る</button><button id="puzzle-retry" type="button">やり直す</button></div>
+          <p id="puzzle-hint-text" hidden></p>
+        </div>
+        <div class="scoreboard"><div class="score-main"><canvas id="score-badge" width="600" height="330" aria-hidden="true"></canvas><span class="eyebrow" id="mode">SCORE</span><p id="score" aria-label="得点">0</p><small>POINTS</small></div><div class="next-box"><span class="eyebrow">NEXT KOMA</span><div id="next" aria-label="次に出る駒"></div></div><div class="score-meta"><canvas id="best-badge" width="600" height="330" aria-hidden="true"></canvas><span class="best-heading"><svg class="best-crown" viewBox="0 0 24 20" aria-hidden="true"><path d="m2 5 5 4 5-7 5 7 5-4-3 12H5Z" fill="currentColor"/><path d="M6 19h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span id="best-caption">BEST</span></span><p id="best" aria-label="最高得点">0</p></div></div>
+        <div class="board-frame"><div class="board-top"><span id="board-status" role="status"></span></div>
+          <div id="game-shell" aria-label="駒を落とす盤面"><div id="banner" aria-live="polite"></div><div id="load-error" role="alert">ゲームを読み込めませんでした。<br>vendor フォルダと main.js を確認してください。</div></div>
+        </div>
+        <div class="play-controls precision-controls"><div id="aim-controls"><button id="aim-left" type="button" aria-label="狙いを少し左へ">◀</button><button id="aim-drop" type="button"><svg class="control-art" viewBox="0 0 28 28" aria-hidden="true"><path d="M14 4v19m-7-7 7 7 7-7" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span>落とす</span></button><button id="aim-right" type="button" aria-label="狙いを少し右へ">▶</button></div><button id="hold" type="button" aria-label="今の駒を持ち駒にする"><span id="hold-piece">＋</span><span>持ち駒<small id="hold-hint">とっておく</small></span></button><button id="rotate" type="button"><span class="rotate-icon" aria-hidden="true"><svg class="control-art" viewBox="0 0 28 28"><path d="M23 12a9 9 0 1 0-3 9" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/><path d="m18 10 6 4 2-7" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="m14 8 4 2 1 8H9l1-8Z" fill="#eacbff" stroke="#fff" stroke-width="1"/></svg></span><span>回転<small>向きをかえる</small></span></button></div>
+      </section>
+    </main>
+  </div>
+  <section id="help-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="help-title">
+    <div class="dialog tutorial-dialog">
+      <div class="tutorial-top"><span id="help-progress">1 / 3</span><button id="help-close" type="button" aria-label="遊び方を閉じる">×</button></div>
+      <div id="help-copy" aria-live="polite"><h2 id="help-title"></h2><p id="help-description"></p></div>
+      <div id="help-scene" class="tutorial-scene"></div>
+      <div id="help-dots" aria-hidden="true"></div>
+      <div class="tutorial-nav"><button id="help-back" type="button">戻る</button><button id="help-next" class="primary-button" type="button">次へ</button></div>
+    </div>
+  </section>
+  <section id="result-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="result-title"><div class="dialog"><p class="eyebrow" id="result-eyebrow">おつかれさま、いい一局。</p><h2 id="result-title">はじめの一歩</h2><p id="final-score"></p><p id="result-summary"></p><canvas id="result-card" width="720" height="900" aria-label="今回の結果画像"></canvas><p id="share-status" role="status"></p><textarea id="share-text" aria-label="コピー用の結果とリンク" readonly hidden></textarea><div class="dialog-actions"><button id="puzzle-next" class="primary-button" type="button" hidden>次の問題へ</button><button id="puzzle-select-result" class="secondary-button" type="button" hidden>問題を選ぶ</button><button id="restart" class="primary-button" type="button">もう一局、むすぶ</button><button id="copy-result" class="secondary-button" type="button">結果・挑戦リンクをコピー</button><button id="share" class="secondary-button" type="button">結果をシェア・保存</button></div></div></section>
+  <section id="puzzles-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="puzzles-title"><div class="dialog"><p class="eyebrow">全50問。五つ星の頂へ。</p><h2 id="puzzles-title">詰めこま</h2><p class="dialog-intro">手数以内に目標の駒を作ればクリア。<br>持ち駒への交換は手数を使いません。<br>★5は超難問。持ち駒の使いどころと精密な狙いが鍵。</p><div id="puzzle-filters" aria-label="難易度で絞り込み"></div><p class="dialog-intro">問題を選ぶと、現在の一局は終了します。</p><div id="puzzle-list"></div><button id="puzzles-close" class="secondary-button" type="button">戻る</button></div></section>
+  <section id="audio-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="audio-title"><div class="dialog"><p class="eyebrow">音を、ちょうどいい大きさに。</p><h2 id="audio-title">音量設定</h2><label class="volume-row" for="music-volume">BGM <output id="music-value"></output><input id="music-volume" type="range" min="0" max="100" step="5"></label><label class="volume-row" for="effects-volume">効果音 <output id="effects-value"></output><input id="effects-volume" type="range" min="0" max="100" step="5"></label><button id="audio-preview" class="secondary-button" type="button">音を試す（約5秒）</button><p id="audio-status" role="status"></p><button id="audio-close" class="primary-button" type="button">盤面へ戻る</button></div></section>
+  </div></div>
+  <script src="./sharing.js"></script>
+  <script src="./audio.js"></script>
+  <script src="./puzzles.js"></script>
+  <script src="./vendor/matter.min.js"></script>
+  <script>if (!window.Matter) document.getElementById("load-error").style.display = "grid";</script>
+  <script src="./piece-assets.js"></script>
+  <script src="./glyphs.js"></script>
+  <script src="./sprites.js"></script>
+  <script src="./visuals.js"></script>
+  <script src="./tutorial.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

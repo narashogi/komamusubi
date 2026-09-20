@@ -1,0 +1,139 @@
+/* Soft molded surfaces and crisp white reflections, shared with the pieces. */
+#phone-screen{background:radial-gradient(ellipse at 12% 0,#ffe5f2,transparent 48%),linear-gradient(160deg,#fff8f7,#f3eaff 74%,#e8eaff)}
+.brand-logo{width:170px;height:51px;object-fit:contain;filter:none}
+.icon-button,.home-mode .icon-button{background:linear-gradient(#fffefd 12%,#fcf0ff 65%,#ead9f7);border:1px solid #d9b9ea;box-shadow:inset 0 2px 0 white,0 2px 0 #d9bde7;color:#9156b7}
+body:not(.puzzle-mode) .scoreboard{background:linear-gradient(110deg,#fff0f7,#fffdf9 50%,#f4e8ff);border:1px solid #e3c1df;box-shadow:inset 0 2px 0 #fff,0 2px 0 #dfc6e6;border-radius:18px}
+body:not(.puzzle-mode) .score-main{border-radius:12px;background:linear-gradient(#ffe6f16b,#fff7fb20)}
+body:not(.puzzle-mode) .score-meta{border-radius:12px;background:linear-gradient(#eedcff75,#faf4ff30)}
+#next .queue-label,.puzzle-mode #next .queue-label{background:linear-gradient(#fff4be,#ffd888);border:1px solid #edc17d;box-shadow:inset 0 1px 0 white,0 1px 0 #e9c48c;color:#936031;border-radius:9px}
+#next .queue-arrow{color:#b491d7;font-weight:800}
+body .board-frame,body.puzzle-mode .board-frame{background:linear-gradient(125deg,#ffedf7 0%,#f0d2f4 40%,#d6c0ed 70%,#f4e2fa);border-color:#c7a4dd;box-shadow:inset 0 2px 1px #fff,0 3px 0 #ccb2dd,0 5px 9px #9462ab12;border-radius:20px}
+#game-shell{border-color:#e3c9d3;border-radius:16px;background:#fff8ef;box-shadow:inset 0 2px 5px #b789aa22}
+.play-controls #aim-controls #aim-drop{background:linear-gradient(#ffa2d2 0%,#f376b6 20%,#eb5aa9 70%,#d8479a);border-color:#d967a6;box-shadow:inset 0 2px 0 #ffe7f5,0 3px 0 #bb498f,0 5px 8px #ca649626}
+.play-controls.precision-controls #rotate{background:linear-gradient(#d7b0ff 0%,#b88bec 20%,#a572df 70%,#915fc9);border-color:#a06bcd;box-shadow:inset 0 2px 0 #f4e3ff,0 3px 0 #8052b1,0 5px 8px #9b6bbb26}
+.play-controls.precision-controls #hold{background:linear-gradient(#fff5c6 0%,#ffe598 24%,#ffdc7d 65%,#edc66c 100%);border-color:#d9b365;border-radius:16px;box-shadow:inset 0 3px 3px #fffde8,inset 3px 0 5px #fff3c5,inset -3px -4px 5px #d7a95455,0 4px 0 #ca9f53,0 6px 8px #b58d3c20;color:#7f582c}
+.play-controls.precision-controls #hold::after{content:"";position:absolute;left:14%;right:14%;top:5px;height:3px;border-radius:6px;background:#fffbed;pointer-events:none}
+.play-controls #aim-controls #aim-left,.play-controls #aim-controls #aim-right{background:linear-gradient(#fffafd,#f5e6fa 70%,#e9d6f5);box-shadow:inset 0 2px 0 white,0 3px 0 #d7bce5;border-color:#d9c0e8;color:#9965ba}
+.play-controls button{position:relative}
+.play-controls #aim-drop::after,.play-controls #rotate::after{content:"";position:absolute;left:14%;right:14%;top:4px;height:2px;background:#fff9;border-radius:6px;pointer-events:none}
+.evolution{padding:5px 3px;border-radius:13px;background:#fff8fc80;box-shadow:inset 0 1px 0 #fff}
+.home-mode #phone-screen{background:radial-gradient(ellipse at 75% 20%,#fff0cd,transparent 42%),radial-gradient(ellipse at 8% 45%,#ffe0ef,transparent 52%),linear-gradient(150deg,#fff8f9,#f1e6ff)}
+.home-mode .masthead .brand{visibility:hidden}
+.home-logo{width:min(100%,340px);height:auto;object-fit:contain;display:block;margin:auto;filter:none}
+.menu-heading{padding-top:0}
+#top-menu h1{line-height:1;margin:0}
+.menu-scene{max-height:360px}
+#normal-mode{background:linear-gradient(150deg,#ffb1d8,#ed78b8 40%,#d851a4);border-color:#dc78b0;box-shadow:inset 0 3px 0 #ffe6f4,0 5px 0 #b5448a,0 10px 20px #b9569220}
+#normal-mode::after{width:auto;height:3px;left:22px;right:22px;top:6px;border:0;background:#fff9;border-radius:8px;box-shadow:none}
+.menu-best{background:#ae428136;color:#fff3fc}
+.menu-mode-top{color:#fff2fc}
+#puzzles-open{background:linear-gradient(145deg,#fff9ff,#f0dcff 65%,#e5caf8);border-color:#ceb0e7;box-shadow:inset 0 2px 0 #fff,0 4px 0 #c6a1e0;color:#7e4fa5}
+.puzzle-menu-icon{background:linear-gradient(#e3baff,#b886e3);color:#fff3ff;text-shadow:0 1px 0 #9c67bb}
+.menu-progress-track{background:#dec8ed}
+#menu-progress-fill{background:linear-gradient(90deg,#e69ccb,#b580df)}
+#puzzle-info,.puzzle-mode .scoreboard{background:linear-gradient(135deg,#fff9e9,#fff0f7);border-color:#e6cbdc;box-shadow:inset 0 2px 0 white,0 2px 0 #e6d1e9;border-radius:16px}
+#puzzle-remaining{background:linear-gradient(#cda0f3,#a770d5);box-shadow:inset 0 1px 0 #ead0ff;color:white}
+.dialog{background:linear-gradient(145deg,#fffdfb,#fff6fc 70%,#f5eaff);border:1px solid #e1c4e8;box-shadow:inset 0 3px 0 white,0 8px 0 #bd99cc35,0 20px 60px #49245a24}
+.primary-button{background:linear-gradient(#d8aff7,#ad76df);border:1px solid #a879cc;box-shadow:inset 0 2px 0 #eddaff,0 3px 0 #8455b0}
+@container phone (max-width:360px){.brand-logo{width:151px;height:45px}.home-logo{max-width:285px}}
+.compact-home .home-logo{width:255px}
+body:not(.puzzle-mode) .score-main{background:linear-gradient(150deg,#fff9fc 4%,#ffddeb 48%,#f9c6de);border:1px solid #e8b6d1;border-radius:16px;box-shadow:inset 0 3px 3px #fff, inset 3px 0 4px #fff6fb,inset -2px -3px 4px #d987b629,0 2px 0 #dca7c8}
+body:not(.puzzle-mode) .score-meta{background:linear-gradient(150deg,#fefbff 4%,#edddfc 48%,#e0c9f4);border:1px solid #d1b7e7;border-radius:16px;box-shadow:inset 0 3px 3px #fff,inset 3px 0 4px #fbf5ff,inset -2px -3px 4px #9f76c129,0 2px 0 #c5a6df}
+body:not(.puzzle-mode) .scoreboard{background:#fff9fc96;box-shadow:inset 0 1px 0 #fff;padding:5px;gap:6px}
+/* Whipped-cream dream world: illustrated frames, clear live digits. */
+body:not(.puzzle-mode) .scoreboard{background:transparent;border-color:transparent;box-shadow:none;padding:1px 0 3px;gap:5px}
+body:not(.puzzle-mode) .score-main,body:not(.puzzle-mode) .score-meta,body:not(.puzzle-mode) .score-meta.record-achieved{background:none;border:0;box-shadow:none;border-radius:0;overflow:visible}
+#score-badge,#best-badge{height:65px;object-fit:fill}
+body .board-frame,body.puzzle-mode .board-frame{border-color:#e3c6eb;background:linear-gradient(135deg,#fffdfb,#ffe7f4 30%,#e4dcff 70%,#ffedf5);box-shadow:inset 0 3px 2px #fff,0 3px 0 #dac2e8,0 6px 15px #d8a9d42b}
+#game-shell{border-color:#f1dceb;background:#fff1fa}
+@container phone (max-width:360px){#score-badge,#best-badge{height:58px}}
+/* Milk-white base lets the gummy pieces carry the color. */
+body:not(.home-mode) #phone-screen{background:linear-gradient(160deg,#fffaf8,#fcf8fb 60%,#f4eef7)}
+body .board-frame,body.puzzle-mode .board-frame{border-color:#e4d8df;background:linear-gradient(135deg,#fffefa,#f7edf2 45%,#ede4f0 80%,#fffafc);box-shadow:inset 0 3px 2px #fff,0 3px 0 #ded0dc,0 5px 12px #ae92a817}
+#game-shell{border-color:#eee5e7;background:#fffdfb}
+/* Smooth candy surfaces: continuous curves and crisp curved reflections. */
+body .board-frame,body.puzzle-mode .board-frame{border-radius:28px;border-color:#e3d6e5;background:linear-gradient(140deg,#fff,#f6eaf3 50%,#e8dcef);box-shadow:inset 0 3px 3px #fff,inset -2px -2px 4px #cdbbd433,0 3px 0 #dcd0e3,0 5px 12px #ae92a817}
+#game-shell{border-radius:23px;border-color:#eee4ee;background:#fffcff}
+.play-controls #aim-controls #aim-drop,.play-controls.precision-controls #hold,.play-controls.precision-controls #rotate{border-radius:24px}
+.play-controls #aim-controls #aim-left,.play-controls #aim-controls #aim-right{border-radius:24px}
+.play-controls #aim-drop::after,.play-controls #rotate::after,.play-controls.precision-controls #hold::after{left:15%;right:15%;top:4px;height:8px;background:transparent;border-top:3px solid #ffffffe0;border-radius:50%;}
+#next .queue-label,.puzzle-mode #next .queue-label{border-radius:999px;font-family:"Mochiy Pop One",sans-serif;font-weight:400;font-size:9px;line-height:1.3;letter-spacing:0;color:#a66839;text-shadow:0 1px 0 #fff8e5}
+#puzzle-info,.puzzle-mode .scoreboard{border-radius:24px;background:linear-gradient(145deg,#fffaff,#f3e8fa);box-shadow:inset 0 3px 2px #fff,0 2px 0 #e0cfe9}
+#normal-mode,#puzzles-open{border-radius:28px}
+body:not(.puzzle-mode) #board-status:not(:empty){display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;padding:0 8px;border:2px solid #fff;border-radius:999px;background:#ffe5ef;color:#ba3c73;font:400 26px/1 "Mochiy Pop One",sans-serif;box-shadow:0 2px 5px #ac55732b}
+/* Home: one tight logo/character composition and three soft jelly choices. */
+.home-mode #top-menu{padding:12px 19px 20px;justify-content:flex-start}
+.home-mode .menu-scene{flex:0 1 226px;min-height:115px;max-height:226px;margin:-5px -6px 16px}
+.home-mode .menu-characters{max-height:226px}
+.home-mode .menu-spark{display:none}
+.home-mode .menu-modes{display:grid;gap:17px;flex-shrink:0;padding:0 5px}
+body.home-mode #top-menu .menu-modes .jelly-menu-button{--jelly-top:#ffd3e8;--jelly-mid:#ff9fca;--jelly-bottom:#ed77af;--jelly-edge:#d3689d;--jelly-ink:#98496e;display:flex;align-items:center;justify-content:center;position:relative;isolation:isolate;min-height:76px;padding:14px 20px;border-radius:40px;border:0;background:linear-gradient(180deg,var(--jelly-top),var(--jelly-mid) 57%,var(--jelly-bottom));box-shadow:inset 0 4px 7px #ffffffb3,inset 0 -5px 9px var(--jelly-edge),0 5px 9px #b978a42b;color:var(--jelly-ink);font:400 21px/1.5 "Mochiy Pop One",sans-serif;text-align:center;opacity:1;overflow:hidden}
+body.home-mode #top-menu .menu-modes #puzzles-open{--jelly-top:#efe0ff;--jelly-mid:#d4aff6;--jelly-bottom:#ba8ee5;--jelly-edge:#aa7ccc;--jelly-ink:#74479b}
+body.home-mode #top-menu .menu-modes #battle-mode{--jelly-top:#d9fff1;--jelly-mid:#a8eed9;--jelly-bottom:#7ed6bf;--jelly-edge:#70bfae;--jelly-ink:#387e75;cursor:default}
+.home-mode .jelly-menu-button span{position:relative;z-index:1;text-shadow:0 2px 0 #fff9}
+body.home-mode #top-menu .menu-modes .jelly-menu-button::before{content:"";position:absolute;left:16px;top:10px;width:32px;height:12px;border-radius:50%;background:#fffc;transform:rotate(-25deg);pointer-events:none}
+body.home-mode #top-menu .menu-modes .jelly-menu-button::after{content:"";position:absolute;left:52px;right:auto;top:9px;width:8px;height:8px;border:0;border-radius:50%;background:#fff;box-shadow:none;pointer-events:none}
+body.home-mode #top-menu .menu-modes .jelly-menu-button:active:not(:disabled){transform:translateY(3px);box-shadow:inset 0 3px 6px #ffffffa6,inset 0 -3px 7px var(--jelly-edge),0 2px 5px #b978a426}
+.home-mode.compact-home #top-menu{padding:3px 15px 14px}
+.home-mode.compact-home .menu-scene{flex-basis:160px;min-height:100px;margin-bottom:11px}
+.home-mode.compact-home .menu-modes{gap:12px}
+/* Paged visual tutorial, using the same artwork as the playable board. */
+#help-modal{padding:18px}
+#help-modal .tutorial-dialog{width:100%;max-width:370px;padding:16px 18px 20px;border-radius:30px;background:linear-gradient(145deg,#fff,#fff4fa 75%,#f4e9ff);overflow:auto}
+.tutorial-top{display:flex;align-items:center;justify-content:space-between;color:#a47eb4;font-size:12px}
+#help-close{width:34px;height:34px;padding:0;border:1px solid #e7d3ef;border-radius:50%;background:#fff;color:#a078b4;font:26px/1 system-ui}
+#help-modal #help-title{font-size:18px;line-height:1.6;color:#965d93;margin:12px 0 8px;letter-spacing:0}
+#help-description{font:600 13px/1.9 system-ui,sans-serif;color:#7b677f;min-height:76px;margin:0 0 14px;text-align:left}
+.tutorial-scene{position:relative;height:208px;border:2px solid #efdcea;border-radius:23px;background-color:#fff;background-size:cover;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:12px;box-shadow:inset 0 2px 0 #fff}
+.tutorial-piece{display:block;object-fit:contain;width:62px;height:auto;filter:drop-shadow(0 3px 2px #bc8ca429)}
+.tutorial-merge{gap:4px;padding:10px}
+.tutorial-merge .tutorial-piece{width:58px}
+.tutorial-merge .merge-result{width:72px}
+.merge-plus,.merge-arrow{font:700 23px system-ui;color:#c59bbd}
+.merge-result{animation:tutorial-pop 2.8s ease-in-out infinite}
+.tutorial-line{position:absolute;left:0;right:0;top:74px;border-top:2px dashed #d97493}
+.tutorial-count{position:absolute;top:14px;left:50%;transform:translateX(-50%);white-space:nowrap;border:2px solid #fff;background:#ffe2ee;color:#bc487d;padding:5px 12px;border-radius:22px;font-size:20px}
+.tower-bottom{position:absolute;width:112px;bottom:-15px;left:80px;transform:rotate(-10deg)}
+.tower-top{position:absolute;width:75px;bottom:96px;left:94px;transform:rotate(7deg)}
+.tutorial-aim-line{position:absolute;top:24px;bottom:46px;left:50%;border-left:2px dashed #c9acda}
+.aim-piece{position:absolute;top:20px;left:calc(50% - 28px);width:56px;animation:tutorial-aim 3s ease-in-out infinite}
+.tutorial-down{position:absolute;top:95px;color:#ba8fce;font-size:30px}
+.tutorial-action{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);border:1px solid #d58bad;background:linear-gradient(#ffcee6,#f091c1);box-shadow:inset 0 2px 0 #fff9,0 2px 0 #d990b8;border-radius:18px;padding:5px 22px;color:#9d4c7c;font-size:13px}
+.tutorial-slot{width:96px;height:150px;border:1px solid #ead8ed;background:#fff9;border-radius:20px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;font-size:12px;color:#a47bb1}
+.tutorial-slot.saved{background:linear-gradient(#fff9e3,#fff0c1);border-color:#eddaa3;color:#a08246}
+.tutorial-swap{color:#b38acc;font:38px/1 system-ui}
+.tutorial-rotate{padding-bottom:35px;gap:18px}
+.tutorial-rotate .tutorial-piece{width:70px}
+.rotate-after{transform:rotate(90deg)}
+#help-dots{display:flex;justify-content:center;gap:7px;margin:16px 0}
+#help-dots span{width:7px;height:7px;border-radius:99px;background:#e6d6ec}
+#help-dots .active{width:22px;background:#da94c1}
+.tutorial-nav{display:flex;gap:10px}
+.tutorial-nav button{min-height:46px;border-radius:24px;font:400 14px "Mochiy Pop One",sans-serif}
+#help-back{width:80px;background:#f5ebfa;color:#a37bb5;box-shadow:inset 0 2px 0 #fff,0 2px 0 #e0cce9}
+#help-next{flex:1;background:linear-gradient(#ffbbdc,#ef8dc0);border-color:#d88bb3;box-shadow:inset 0 2px 0 #fff9,0 3px 0 #c873a1;color:#fff}
+@keyframes tutorial-pop{0%,35%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes tutorial-aim{0%,20%{transform:translateX(-45px)}45%,60%{transform:translateX(0)}80%,100%{transform:translateY(50px)}}
+@media(prefers-reduced-motion:reduce){.merge-result,.aim-piece{animation:none}}
+@media (max-height:650px){#help-modal .tutorial-dialog{padding:10px 14px 14px}.tutorial-scene{height:160px}#help-description{min-height:0;font-size:12px;margin-bottom:10px}#help-modal #help-title{font-size:16px;margin:5px 0}#help-dots{margin:10px 0}.tower-bottom{bottom:-28px}.tower-top{bottom:70px}.tutorial-line{top:48px}.tutorial-count{top:4px;font-size:16px}}
+body.home-mode.compact-home #top-menu .menu-modes .jelly-menu-button{min-height:58px;padding:10px 15px;font-size:18px}
+/* Large, short lines make the tutorial readable at phone size. */
+/* Match the menu's softly shaded, outline-free control edges. */
+.play-controls #aim-controls #aim-drop{border-color:transparent;background-clip:padding-box;box-shadow:inset 0 3px 5px #ffeaf6,inset 0 -4px 7px #cf5299,0 4px 7px #ca64962b}
+.play-controls.precision-controls #hold{border-color:transparent;background-clip:padding-box;box-shadow:inset 0 3px 5px #fffbea,inset 0 -4px 7px #d8b365,0 4px 7px #b58d3c25}
+.play-controls.precision-controls #rotate{border-color:transparent;background-clip:padding-box;box-shadow:inset 0 3px 5px #f4e6ff,inset 0 -4px 7px #9568bf,0 4px 7px #9b6bbb2b}
+.play-controls #aim-controls #aim-drop:active:not(:disabled),.play-controls.precision-controls #hold:active:not(:disabled),.play-controls.precision-controls #rotate:active:not(:disabled){box-shadow:inset 0 2px 5px #ffffff80,inset 0 -2px 6px #92649633,0 1px 4px #9b6bbb20!important}
+#help-modal{padding:12px}
+#help-modal #help-title{font-size:21px;line-height:1.6;color:#965085;margin:10px 0 14px}
+#help-description{font:400 18px/1.8 "Mochiy Pop One",sans-serif;color:#795b83;min-height:142px;margin:0 0 16px;text-align:center;letter-spacing:0}
+.tutorial-copy-line{display:block}
+.tutorial-copy-finish{color:#b74685;margin-top:5px}
+#help-description strong{display:inline;color:#b43b83;font:inherit;background:linear-gradient(transparent 62%,#ffd6e9 62%);border-radius:5px}
+.tutorial-nav button{font-size:16px;min-height:48px}
+.tutorial-top{font-size:14px}
+.compact-home #help-modal .tutorial-dialog{padding:10px 12px 14px}
+.compact-home #help-modal #help-title{font-size:17px;margin:7px 0 10px}
+.compact-home #help-description{font-size:16px;line-height:1.7;min-height:116px;margin-bottom:12px}
+.compact-home .tutorial-scene{height:145px}
+.compact-home #help-dots{margin:12px 0}
+.compact-home .tutorial-slot{height:126px;gap:6px}
